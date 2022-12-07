@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+body {
+background-color: black;
+color: white;
+font-family: 'Zen Dots', cursive;
+padding: 0;
+margin: 0;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#VPCollection {
+    display: flex;
+}
+.VaseyPotion {
+  width: 123px; height: 205px;
+}
+
+.VaseyPotion:nth-child(2){
+transition-delay: 200ms;
+}
+.VaseyPotion:nth-child(3){
+    transition-delay: 400ms;
+}
+.VaseyPotion:nth-child(4){
+        transition-delay: 600ms;
+ }    
+ .VaseyPotion:nth-child(2){
+transition-delay: 200ms;
+}
+.VaseyPotion:nth-child(3){
+    transition-delay: 400ms;
+}
+.VaseyPotion:nth-child(4){
+        transition-delay: 600ms;
+ } 
+ .VaseyPotion:nth-child(5){
+    transition-delay: 800ms;
+} 
