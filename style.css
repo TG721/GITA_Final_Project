@@ -11,7 +11,11 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 50vh;
+}
+
+img {
+    object-fit: contain
 }
 
 .hidden {
@@ -31,25 +35,6 @@ section {
 .VaseyPotion {
   width: 123px; height: 205px;
 }
-
-.VaseyPotion:nth-child(2){
-transition-delay: 200ms;
+.VaseyPotion:hover{
+    width:246px; height: 410px;
 }
-.VaseyPotion:nth-child(3){
-    transition-delay: 400ms;
-}
-.VaseyPotion:nth-child(4){
-        transition-delay: 600ms;
- }    
- .VaseyPotion:nth-child(2){
-transition-delay: 200ms;
-}
-.VaseyPotion:nth-child(3){
-    transition-delay: 400ms;
-}
-.VaseyPotion:nth-child(4){
-        transition-delay: 600ms;
- } 
- .VaseyPotion:nth-child(5){
-    transition-delay: 800ms;
-} 

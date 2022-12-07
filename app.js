@@ -34,3 +34,9 @@ const observer = new IntersectionObserver((entries)=>{
 const hidEls = document.querySelectorAll('.hidden');
 hidEls.forEach((el)=>observer.observe(el));
 
+// applying delay annimation to VaseyPotion objects
+ const VPelements = document.getElementsByClassName('VaseyPotion');
+ for (let i=1, delay=200; i<VPelements.length; i++, delay+=200){
+    VPelements[i].style.transitionDelay = delay+"ms";
+ }
+
