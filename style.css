@@ -33,11 +33,17 @@ h3 {
     opacity: 1;
     transform: translateX(0);
 }
-
+.chair3D {
+    margin: 0px;
+    width: 123px; height: 205px;
+}
 .VaseyPotion {
+    margin: 0px;
   width: 123px; height: 205px;
 }
 .VaseyPotion:hover{
+    transition: all 1s;
+    margin: 5px;
     width:246px; height: 410px;
 }
 .carousel {
@@ -89,7 +95,25 @@ opacity: 1;
     height: 100%;
     object-fit: cover;
 }
+.SeeOriginal {
+    background-color: rgb(5, 109, 5);
+    color: white;
+    font-size: 30px;
+  border-radius: 10px;
+  margin-top: -10px;
+  }
+  
+.SeeOriginal:hover {
+    background-color: darkblue;
+    color: red;
+    cursor: pointer;
+  }
 #VPCollection {
     display: flex;
 }
+
+#pickleJarOriginal{
+    display: none
+}
+
 

@@ -7,7 +7,7 @@ class ImageData {
 }
 }
 
-var CollectionVP = document.getElementById('VPCollection');
+var collectionVP = document.getElementById('VPCollection');
 const vaseyPotions = [
    new ImageData("https://i.seadn.io/gae/6vXC3LUPUyfsmpDWr17sTweafb_AHdtTXwRgwRhlsYUk1PktVztWlxy9G0TR0DoGn1JrkLDmcCd3Vag5PZ4lS6MHmGZjr7XFHPmh?auto=format&w=1920"),
    new ImageData("https://i.seadn.io/gae/nPgnMu7OIQR9h1_-CihLagLge-Dvb2g2B65EK-PZH_xsbHmxaTDWpD-hb2gJIoowO7otoVVR8GDR_bAVanQVTSlabeW5ULDGtrINYw?auto=format&w=1920"),
@@ -20,7 +20,7 @@ for(let i=0; i<vaseyPotions.length; i++){
     myElm.src=vaseyPotions[i].displayLink;
     myElm.className = "VaseyPotion hidden";
     myElm.alt = "image of Vasey Potion NFT #" + (i+1);
-    CollectionVP.appendChild(myElm);
+    collectionVP.appendChild(myElm);
 }
 
 const observer = new IntersectionObserver((entries)=>{
@@ -34,8 +34,8 @@ const observer = new IntersectionObserver((entries)=>{
     });
 })
 
-const hidEls = document.querySelectorAll('.hidden');
-hidEls.forEach((el)=>observer.observe(el));
+// const hidEls = document.querySelectorAll('.hidden');
+// hidEls.forEach((el)=>observer.observe(el));
 
 // applying delay annimation to VaseyPotion objects
  const VPelements = document.getElementsByClassName('VaseyPotion');
@@ -55,6 +55,23 @@ hidEls.forEach((el)=>observer.observe(el));
     new ImageData("https://i.seadn.io/gae/2y_Xa7rURp8cN42sP_5Qb05R7DHubt335tqGBvOkUNz3CPlPBA76m_PHwEfisPIY-U94sCPAnIcc_vRNocVL5eyV6LIkAqNJMIamgQ?auto=format&w=1000"),
     new ImageData("https://i.seadn.io/gae/chcGgPpWGkbrew6dfXilPGXnTa5v-QwQoYFl1kq0kaWY3DdTcwKCIezKvXFThtiZW8ads-wSqdBxVIZgArtattiwlPP0QyNHboNygQ?auto=format&w=1000"),
  ]
+ var collectionChair3D = document.getElementById('Chair3DCollection');
+ for(let i=0; i<chairs3D.length; i++){
+    let myElm = document.createElement("img");
+    myElm.src=chairs3D[i].displayLink;
+    myElm.className = "chair3D hidden";
+    myElm.alt = "image of 3D chair NFT";
+    collectionChair3D.appendChild(myElm);
+}
+
+// applying delay annimation to 3D chair objects
+const CH3Delements = document.getElementsByClassName('chair3D');
+for (let i=1, delay=200; i<CH3Delements.length; i++, delay+=200){
+    CH3Delements[i].style.transitionDelay = delay+"ms";
+}
+//animation that makes images appear by row
+const hidEls = document.querySelectorAll('.hidden');
+hidEls.forEach((el)=>observer.observe(el));
 
  const CarouselButtons =document.querySelectorAll("[data-carousel-button]");
  CarouselButtons.forEach(button => {
@@ -71,3 +88,22 @@ hidEls.forEach((el)=>observer.observe(el));
     })
  })
 
+ //handling pickle jar 
+ var editiedJar = document.getElementById("pickleJarEditied");
+ var originalJar = document.getElementById("pickleJarOriginal");
+ var jarButton = document.getElementById("jarButton");
+ var jarImageStatus = "editied"
+ jarButton.addEventListener('click', function(e){
+        if(jarImageStatus==="editied"){
+            originalJar.style.display = "block"
+            editiedJar.style.display = "none"
+            jarButton.textContent = "See modified"
+            jarImageStatus = "original"
+        } 
+        else {
+            originalJar.style.display = "none"
+            editiedJar.style.display = "block"
+            jarButton.textContent = "See original"
+            jarImageStatus = "editied"
+        }
+})
