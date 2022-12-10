@@ -44,24 +44,28 @@ const observer = new IntersectionObserver((entries)=>{
  }
 
  const chairs3D = [
-    new ImageData("https://i.seadn.io/gae/zbO9ZtTHjbDknRNm1mZCYp4yFl3oMjFZ0tSczg9O3iPxc3OKYCPTFGSUWwolKwOLYOlU3GU1UEE2oG32MeJNSta7j0Z-SNOGnQ7ej5U?auto=format&w=1920"),
-    new ImageData("https://i.seadn.io/gae/0CmDtV2PbagxbFuug1MhFpnhf6XiW6HMDFNGzOgbE8fdE11qrGVbTffyX4KHlVFfcxNQCgLmLY2eX06JdL78eRr1Q3BbAibYiGJbdTc?auto=format&w=1920"),
-    new ImageData("https://i.seadn.io/gae/VURAWWLIYdGuDnerKaBbsZjIA1wwZE_WP75SbTqCgq30V8da9XfpJlKJowYxnrp3NHXkkELs_HCqm6-QGDSMqK1W02-6Mvd_N8aXkg?auto=format&w=1920"),
-    new ImageData("https://i.seadn.io/gae/vPrboubLfJTbWbxX64kUZqOac4cngurUtaMSuXfTVuodJblWdo0Swu79ZuDZ7znV8Iya4klYIkY_nDyw16ObtcletWo1pKlmJIh2?auto=format&w=1920"),
-    new ImageData("https://i.seadn.io/gae/tgXxOWPDnWsuDx7qI9FSk7c_yLLpRfXHUSR84DOid1g5ig7dZ_bZE6CknU1nemggUxIddBryWwb6XxOdw2jKA_i1ISKPf1ZTk8Zb0Q?auto=format&w=1920"),
-    new ImageData("https://i.seadn.io/gae/J4k7oPAJpdk9NMVdT7M3_CJc4HjzOh4EvEc-rmIQoLdhpoXtPIeSIVCQq0ny9xATmpash7ojWW7lpvUrKyWWW_EiERfjEYcsfTLs?auto=format&w=1920"),
-    new ImageData("https://i.seadn.io/gae/cPC7kvc9RYTU7XQDhCb5teR2P-4GqWRickAz1hJlE2_W80Fk8cySP5uESk3XA961Kqtax6_VbWtNV4WkUFJjHRE-k8pjCvuvFD5t7A?auto=format&w=1000"),
-    new ImageData("https://i.seadn.io/gae/KjgEYRlSl2TmTgABVJe61H9jHcxlBo8ikUciYFu5uIECKyl4WVtZ4-JpGl4bg6OKgTSHA0upw93e38JxdrQ4XS0acI8uvaHX2XHT9lM?auto=format&w=1000"),
-    new ImageData("https://i.seadn.io/gae/2y_Xa7rURp8cN42sP_5Qb05R7DHubt335tqGBvOkUNz3CPlPBA76m_PHwEfisPIY-U94sCPAnIcc_vRNocVL5eyV6LIkAqNJMIamgQ?auto=format&w=1000"),
-    new ImageData("https://i.seadn.io/gae/chcGgPpWGkbrew6dfXilPGXnTa5v-QwQoYFl1kq0kaWY3DdTcwKCIezKvXFThtiZW8ads-wSqdBxVIZgArtattiwlPP0QyNHboNygQ?auto=format&w=1000"),
+    new ImageData("https://i.seadn.io/gae/zbO9ZtTHjbDknRNm1mZCYp4yFl3oMjFZ0tSczg9O3iPxc3OKYCPTFGSUWwolKwOLYOlU3GU1UEE2oG32MeJNSta7j0Z-SNOGnQ7ej5U?auto=format&w=1920","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865845013102985217"),
+    new ImageData("https://i.seadn.io/gae/0CmDtV2PbagxbFuug1MhFpnhf6XiW6HMDFNGzOgbE8fdE11qrGVbTffyX4KHlVFfcxNQCgLmLY2eX06JdL78eRr1Q3BbAibYiGJbdTc?auto=format&w=1920","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865873600405307393"),
+    new ImageData("https://i.seadn.io/gae/VURAWWLIYdGuDnerKaBbsZjIA1wwZE_WP75SbTqCgq30V8da9XfpJlKJowYxnrp3NHXkkELs_HCqm6-QGDSMqK1W02-6Mvd_N8aXkg?auto=format&w=1920","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865875799428562945"),
+    new ImageData("https://i.seadn.io/gae/vPrboubLfJTbWbxX64kUZqOac4cngurUtaMSuXfTVuodJblWdo0Swu79ZuDZ7znV8Iya4klYIkY_nDyw16ObtcletWo1pKlmJIh2?auto=format&w=1920","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865877998451818497"),
+    new ImageData("https://i.seadn.io/gae/tgXxOWPDnWsuDx7qI9FSk7c_yLLpRfXHUSR84DOid1g5ig7dZ_bZE6CknU1nemggUxIddBryWwb6XxOdw2jKA_i1ISKPf1ZTk8Zb0Q?auto=format&w=1920","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865881296986701825"),
+    new ImageData("https://i.seadn.io/gae/J4k7oPAJpdk9NMVdT7M3_CJc4HjzOh4EvEc-rmIQoLdhpoXtPIeSIVCQq0ny9xATmpash7ojWW7lpvUrKyWWW_EiERfjEYcsfTLs?auto=format&w=1920","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865879097963446273"),
+    new ImageData("https://i.seadn.io/gae/cPC7kvc9RYTU7XQDhCb5teR2P-4GqWRickAz1hJlE2_W80Fk8cySP5uESk3XA961Kqtax6_VbWtNV4WkUFJjHRE-k8pjCvuvFD5t7A?auto=format&w=1000","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865882396498329601"),
+    new ImageData("https://i.seadn.io/gae/KjgEYRlSl2TmTgABVJe61H9jHcxlBo8ikUciYFu5uIECKyl4WVtZ4-JpGl4bg6OKgTSHA0upw93e38JxdrQ4XS0acI8uvaHX2XHT9lM?auto=format&w=1000","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865880197475074049"),
+    new ImageData("https://i.seadn.io/gae/2y_Xa7rURp8cN42sP_5Qb05R7DHubt335tqGBvOkUNz3CPlPBA76m_PHwEfisPIY-U94sCPAnIcc_vRNocVL5eyV6LIkAqNJMIamgQ?auto=format&w=1000","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865883496009957377"),
+    new ImageData("https://i.seadn.io/gae/chcGgPpWGkbrew6dfXilPGXnTa5v-QwQoYFl1kq0kaWY3DdTcwKCIezKvXFThtiZW8ads-wSqdBxVIZgArtattiwlPP0QyNHboNygQ?auto=format&w=1000","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865876898940190721"),
  ]
  var collectionChair3D = document.getElementById('Chair3DCollection');
  for(let i=0; i<chairs3D.length; i++){
+    let aElement = document.createElement("a");
     let myElm = document.createElement("img");
     myElm.src=chairs3D[i].displayLink;
     myElm.className = "chair3D hidden";
     myElm.alt = "image of 3D chair NFT";
-    collectionChair3D.appendChild(myElm);
+    aElement.appendChild(myElm)
+    aElement.href = chairs3D[i].clickLink;
+    aElement.target = "_blank"
+    collectionChair3D.appendChild(aElement);
 }
 
 // applying delay annimation to 3D chair objects
