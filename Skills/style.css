@@ -3,17 +3,30 @@
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
     }
-body {
-    background-color: black;
-    color: white;
-    font-size: large;
-    margin: 5px;
-    padding: 0%;
+body{
+    background-color:black;
+    color:white;
+    margin: 10dp;
+}
+.right{
+    float: right;
+}
+@media (max-width: 700px){
+.right{
+    float: none;
+}
 }
 
-#par1, #par2{
-    width: 400px;
-    float: left;
+dt{
+    -webkit-text-stroke: 1px red;
+    color: blue;
+}
+
+dd {
+    width: 300px;
+}
+dt {
+    margin: 5px 0;
 }
 
 nav {

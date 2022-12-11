@@ -53,17 +53,17 @@ h3 {
     margin: 5px;
     width:246px; height: 410px;
 }
-.carousel {
+.slider {
     width: 1080px;
     height: 720px;
     position: relative;
 }
-.carousel > ul {
+.slider > ul {
 margin: 0;
 padding: 0;
 list-style: none;
 }
-.carousel-button {
+.slider-button {
     background: none;
     position: absolute;
     border: none;
@@ -77,14 +77,14 @@ list-style: none;
     padding: 0 .5rem;
     background-color: rgba(0, 0, 0, .1);
 }
-.carousel-button:hover {
+.slider-button:hover {
 color: white;
 background-color: rgba(0, 0, 0, .2);
 }
-.carousel-button.prev {
+.slider-button.prev {
     left: 1rem;
 }
-.carousel-button.next {
+.slider-button.next {
     right: 1rem;
 }
 .slide {
@@ -103,7 +103,7 @@ opacity: 1;
     object-fit: cover;
 }
 .SeeOriginal {
-    background-color: rgb(5, 109, 5);
+    background-color: #320337;
     color: white;
     font-size: 30px;
   border-radius: 10px;

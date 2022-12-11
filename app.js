@@ -73,15 +73,15 @@ const observer = new IntersectionObserver((entries)=>{
 // applying delay annimation to 3D chair objects
 const CH3Delements = document.getElementsByClassName('chair3D');
 leftToRightAppearAnimation(CH3Delements)
-//animation that makes images appear by row
+//animation that makes images appear in a row lines
 const hidEls = document.querySelectorAll('.hidden');
 hidEls.forEach((el)=>observer.observe(el));
 
- const CarouselButtons =document.querySelectorAll("[data-carousel-button]");
- CarouselButtons.forEach(button => {
+ const sliderButtons =document.querySelectorAll("[data-slider-button]");
+ sliderButtons.forEach(button => {
     button.addEventListener("click", () => {
-    const offset = button.dataset.CarouselButton  === "next" ? 1 : -1
-    const slides = button.closest("[data-carousel]").querySelector("[data-slides]")
+    const offset = button.dataset.sliderButton  === "next" ? 1 : -1
+    const slides = button.closest("[data-slider]").querySelector("[data-slides]")
     const activeSlide = slides.querySelector("[data-active]")
     let newIndex = [...slides.children].indexOf(activeSlide) + offset
     if(newIndex < 0) {newIndex=slides.children.length -1}
@@ -102,12 +102,14 @@ hidEls.forEach((el)=>observer.observe(el));
             originalJar.style.display = "block"
             editiedJar.style.display = "none"
             jarButton.textContent = "See modified"
+            jarButton.style.backgroundColor = "rgb(5, 109, 5)"
             jarImageStatus = "original"
         } 
         else {
             originalJar.style.display = "none"
             editiedJar.style.display = "block"
             jarButton.textContent = "See original"
+            jarButton.style.backgroundColor = "#320337"
             jarImageStatus = "editied"
         }
 })
