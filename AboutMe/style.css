@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+    color: white;
+    font-size: large;
+    margin: 5px;
+    padding: 0%;
+}
+
+#par1, #par2{
+    width: 400px;
+    float: left;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: black;
+}
+nav *:not(.container > div){
+    display: inline-block;
+
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+}
+nav a {
+    color: white;
+    font-size: 20px;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+nav a.active, nav a:hover{
+    border: 1px solid white;
+    transition: .5s;
+}
+
+  @media (max-width: 680px){
+    nav *:not(.container > ul, li){
+        display: block;
+
+    }
+    nav h1 {
+        clear:both;
+        text-align: center;
+    }
+    nav {
+        height: 100px;
+    }
+    nav ul {
+        float: none;
+        text-align: center;
+    }
+
+}
