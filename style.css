@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+*{
+text-decoration: none;
+list-style: none;
+}
 body {
 background-color: black;
 color: white;
-font-family: 'Zen Dots', cursive;
+font-family: Arial, Helvetica, sans-serif;
 padding: 0;
-margin: 0;
+margin: 5;
 }
 
+h2,h3 {
+    font-family: 'Zen Dots', cursive;
+}
 section {
     display: grid;
     place-items: center;
@@ -116,4 +123,48 @@ opacity: 1;
     display: none
 }
 
+nav {
+    height: 80px;
+    width: 100%;
+    background: black;
+}
+nav *:not(.container > div){
+    display: inline-block;
 
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+}
+nav a {
+    color: white;
+    font-size: 20px;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+nav a.active, nav a:hover{
+    border: 1px solid white;
+    transition: .5s;
+}
+
+  @media (max-width: 680px){
+    nav *:not(.container > ul, li){
+        display: block;
+
+    }
+    nav h1 {
+        clear:both;
+        text-align: center;
+    }
+    nav {
+        height: 100px;
+    }
+    nav ul {
+        float: none;
+        text-align: center;
+    }
+
+}

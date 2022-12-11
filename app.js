@@ -7,6 +7,12 @@ class ImageData {
 }
 }
 
+function leftToRightAppearAnimation(elements){
+    for (let i=1, delay=200; i<elements.length; i++, delay+=200){
+        elements[i].style.transitionDelay = delay+"ms";
+     }
+}
+
 var collectionVP = document.getElementById('VPCollection');
 const vaseyPotions = [
    new ImageData("https://i.seadn.io/gae/6vXC3LUPUyfsmpDWr17sTweafb_AHdtTXwRgwRhlsYUk1PktVztWlxy9G0TR0DoGn1JrkLDmcCd3Vag5PZ4lS6MHmGZjr7XFHPmh?auto=format&w=1920"),
@@ -34,14 +40,10 @@ const observer = new IntersectionObserver((entries)=>{
     });
 })
 
-// const hidEls = document.querySelectorAll('.hidden');
-// hidEls.forEach((el)=>observer.observe(el));
 
 // applying delay annimation to VaseyPotion objects
  const VPelements = document.getElementsByClassName('VaseyPotion');
- for (let i=1, delay=200; i<VPelements.length; i++, delay+=200){
-    VPelements[i].style.transitionDelay = delay+"ms";
- }
+ leftToRightAppearAnimation(VPelements)
 
  const chairs3D = [
     new ImageData("https://i.seadn.io/gae/zbO9ZtTHjbDknRNm1mZCYp4yFl3oMjFZ0tSczg9O3iPxc3OKYCPTFGSUWwolKwOLYOlU3GU1UEE2oG32MeJNSta7j0Z-SNOGnQ7ej5U?auto=format&w=1920","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865845013102985217"),
@@ -70,9 +72,7 @@ const observer = new IntersectionObserver((entries)=>{
 
 // applying delay annimation to 3D chair objects
 const CH3Delements = document.getElementsByClassName('chair3D');
-for (let i=1, delay=200; i<CH3Delements.length; i++, delay+=200){
-    CH3Delements[i].style.transitionDelay = delay+"ms";
-}
+leftToRightAppearAnimation(CH3Delements)
 //animation that makes images appear by row
 const hidEls = document.querySelectorAll('.hidden');
 hidEls.forEach((el)=>observer.observe(el));
