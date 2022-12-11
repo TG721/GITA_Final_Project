@@ -111,7 +111,6 @@ opacity: 1;
   }
   
 .SeeOriginal:hover {
-    background-color: darkblue;
     color: red;
     cursor: pointer;
   }
