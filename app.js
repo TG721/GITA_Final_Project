@@ -13,6 +13,20 @@ function leftToRightAppearAnimation(elements){
      }
 }
 
+function populateOpenSeaCollection(collectionArray,htmlPlace,className,altText){
+    for(let i=0; i<collectionArray.length; i++){
+        let aElement = document.createElement("a");
+        let myElm = document.createElement("img");
+        myElm.src=collectionArray[i].displayLink;
+        myElm.className = className + " hidden"
+        myElm.alt = altText;
+        aElement.appendChild(myElm)
+        aElement.href = collectionArray[i].clickLink;
+        aElement.target = "_blank"
+        htmlPlace.appendChild(aElement);
+    }
+}
+
 var collectionVP = document.getElementById('VPCollection');
 const vaseyPotions = [
    new ImageData("https://i.seadn.io/gae/6vXC3LUPUyfsmpDWr17sTweafb_AHdtTXwRgwRhlsYUk1PktVztWlxy9G0TR0DoGn1JrkLDmcCd3Vag5PZ4lS6MHmGZjr7XFHPmh?auto=format&w=1920"),
@@ -58,24 +72,11 @@ const observer = new IntersectionObserver((entries)=>{
     new ImageData("https://i.seadn.io/gae/chcGgPpWGkbrew6dfXilPGXnTa5v-QwQoYFl1kq0kaWY3DdTcwKCIezKvXFThtiZW8ads-wSqdBxVIZgArtattiwlPP0QyNHboNygQ?auto=format&w=1000","https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/46943671559035260127746625138160288194739774191527114369701865876898940190721"),
  ]
  var collectionChair3D = document.getElementById('Chair3DCollection');
- for(let i=0; i<chairs3D.length; i++){
-    let aElement = document.createElement("a");
-    let myElm = document.createElement("img");
-    myElm.src=chairs3D[i].displayLink;
-    myElm.className = "chair3D hidden";
-    myElm.alt = "image of 3D chair NFT";
-    aElement.appendChild(myElm)
-    aElement.href = chairs3D[i].clickLink;
-    aElement.target = "_blank"
-    collectionChair3D.appendChild(aElement);
-}
+populateOpenSeaCollection(chairs3D,collectionChair3D,"chair3D","image of 3D chair NFT")
 
 // applying delay annimation to 3D chair objects
 const CH3Delements = document.getElementsByClassName('chair3D');
 leftToRightAppearAnimation(CH3Delements)
-//animation that makes images appear in a row lines
-const hidEls = document.querySelectorAll('.hidden');
-hidEls.forEach((el)=>observer.observe(el));
 
  const sliderButtons =document.querySelectorAll("[data-slider-button]");
  sliderButtons.forEach(button => {
@@ -113,3 +114,29 @@ hidEls.forEach((el)=>observer.observe(el));
             jarImageStatus = "editied"
         }
 })
+
+//dynamic load
+const request = new XMLHttpRequest();
+var gneeraArray = []
+//getting About me information and more specifically text of paragraphs(future <p> elemenets) as list
+request.open("GET","https://mocki.io/v1/d9c6f78a-115a-40f8-b2b1-8c7f804beba3");
+request.send()
+request.onload = ()=>{
+    console.log(request);
+    if(request.status===200){
+        gneeraArray= JSON.parse(request.response)
+    }
+    else {
+        console.log(`error ${request.status}`);
+
+    }
+    var collectionGneera = document.getElementById("GneeraCollection");
+    populateOpenSeaCollection(gneeraArray,collectionGneera,"Gneera","Picture of Gneera NFT")
+    var gneeraElements = document.getElementsByClassName('Gneera');
+    leftToRightAppearAnimation(gneeraElements);
+    
+//the code below needs to be executed after everything has been loaded  
+//animation that makes images appear in a row lines
+const hidEls = document.querySelectorAll('.hidden');
+hidEls.forEach((el)=>observer.observe(el));
+}
