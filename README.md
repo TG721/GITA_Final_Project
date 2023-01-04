@@ -1,4 +1,4 @@
-## GITA_Final_Project
+# GITA_Final_Project
 This project is my Graphic Design portfolio and CV.
 On 'Home Page, my works are shown.
 On 'About Me' page, short info about me is dinamically loaded from API. 
